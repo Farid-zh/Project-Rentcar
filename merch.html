@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Merchandise Shop</title>
+	<link href='https://fonts.googleapis.com/css?family=Faster One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Racing Sans One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Permanent Marker' rel='stylesheet'>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+	<style>
+		.header{
+      background-image: url(header.png);
+      padding: 10px;
+      top: 0px;
+      left: 0px;
+      width: 1495px;
+      position: absolute;
+      z-index: 999;
+    }
+    .header2{
+      z-index: 999;
+    }
+    .logo{
+      height: 80px;
+      width: 120px;
+      margin-top: 0px;
+    } 
+    h1{
+      color: white;
+      font-size: 15px;
+      top: 6px;
+      right: 45px;
+      position: absolute;
+    }
+    .gmail{
+      height: 30px;
+      width: 30px;
+      background-color: black;
+      border-radius: 50px;
+      top: 50px;
+      right: 10px;
+      position: absolute; 
+    }
+    .tlp{
+      height: 30px;
+      width: 30px;
+      background-color: black;
+      border-radius: 50px;
+      top: 10px;
+      right: 10px;
+      position: absolute;
+    }
+    .tlp:hover{
+       animation: shake 0.5s;
+       animation-iteration-count: infinite; 
+    }
+    @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+    h2{
+      color: white;
+      font-size: 15px;
+      top: 42px;
+      right: 45px;
+      position: absolute;
+    }
+    .vmf{
+      position: absolute;
+      left: 650px;
+      height: 50px;
+      width: 200px;
+      top: 25px;
+    }
+    .home{
+      text-decoration: none;
+      color: black;
+      margin-top: -200px;
+      background-color: whitesmoke;
+      padding: 8px;
+      font-size: 20px;
+      margin-left: 50px;
+      font-family: 'Racing Sans One'
+    }
+    .header2{
+      position: absolute;
+      top: 103px;
+      background-color: whitesmoke;
+      padding: 8px;
+      width: 1520px;
+      left: 0px;
+    }
+    .home:hover{
+      background-color: lightsteelblue;
+    } 
+		.dropbtn {
+  			background-color: whitesmoke;
+  			color: black;
+  			padding: 8px;
+  			font-size: 20px;
+  			border: none;
+  			cursor: pointer;
+  			margin-top: -90px;
+  			margin-left: 50px;
+  			font-family: 'Racing Sans One'
+		}
+		.dropbtn:hover, .dropbtn:focus {
+  			background-color: lightsteelblue;
+		}
+		.dropdown {
+ 		 	position: relative;
+  			display: inline-block;
+		}
+		.dropdown-content {
+  			display: none;
+  			position: absolute;
+  			background-color: #f1f1f1;
+  			min-width: 160px;
+  			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  			z-index: 4;
+  			margin-left: 50px;
+  			font-family: 'Faster One'
+		}
+		.dropdown-content a {
+  			color: black;
+  			padding: 12px 16px;
+  			text-decoration: none;
+  			display: block;
+		}
+		.dropdown-content a:hover {background-color: #ddd}
+		.show {display:block;}
+		.dropbtns {
+  			background-color: whitesmoke;
+  			color: black;
+  			padding: 8px;
+  			font-size: 20px;
+  			border: none;
+  			cursor: pointer;
+  			position: absolute;
+  			margin-left: 460px;
+  			margin-top: -40px;
+		}
+		.dropbtns:hover, .dropbtns:focus {
+  			background-color: lightsteelblue;
+		}
+		.dropdownku {
+ 		 	position: relative;
+  			display: inline-block;
+		}
+		.dropdown-contents {
+  			display: none;
+  			position: absolute;
+  			background-color: #f1f1f1;
+  			min-width: 160px;
+  			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  			z-index: 1;
+  			margin-left: 460px;
+  			margin-top: 2px;
+  			width: 200px;
+  			text-align: center;
+		}
+		.dropdown-contents a {
+  			color: black;
+  			padding: 12px 16px;
+  			text-decoration: none;
+  			display: block;
+  			font-family: 'Permanent Marker'
+		}
+		.dropdown-contents a:hover {background-color: #ddd}
+		.show {display:block;}
+		.dropbtned {
+  			background-color: #f1f1f1;
+  			color: black;
+  			padding: 16px;
+  			font-size: 16px;
+  			border: none;
+  			width: 200px;
+  			font-family: 'Permanent Marker'
+		}
+		.dropdowney {
+  			position: relative;
+  			display: inline-block;
+		}
+		.dropdown-contented {
+  			display: none;
+  			position: absolute;
+  			background-color: #f1f1f1;
+  			min-width: 160px;
+  			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  			z-index: 1;
+  			margin-left: 200px;
+  			margin-top: -54px;
+		}
+		.dropdown-contented a {
+  			color: black;
+  			padding: 12px 16px;
+  			text-decoration: none;
+  			display: block;
+		}
+		.dropdown-contented a:hover {background-color: pink;}
+		.dropdowney:hover .dropdown-contented {display: block;}
+		.dropdowney:hover .dropbtned {background-color: #ddd;}
+		.beli{
+			text-decoration: none;
+			font-size: 20px;
+			color: black;
+			padding: 8px;
+			background-color: whitesmoke;
+			margin-left: 50px;
+		}
+		.beli:hover{
+			background-color: lightsteelblue;
+			padding: 8px;
+		}
+		.addto{
+			text-decoration: none;
+			color: black;
+			font-weight: bold;
+			background-color: lavender;
+			padding: 8px;
+			border-radius: 18px;
+			font-size: 14px;
+		}
+		.addto:hover{
+			background-color: pink;
+			padding: 10px;
+		}
+		.cartlogo{
+			width: 20px;
+			height: 20px; 
+			margin: 0px; 
+			padding: 0px; 
+			margin-top: -10px;
+		}
+		.container {
+  			position: relative; 
+  			max-width: 800px;
+  			margin: 0 auto;
+		}
+
+		.container .content {
+  			position: absolute;
+  			bottom: 0;
+  			background: rgb(0, 0, 0);
+  			background: rgba(0, 0, 0, 0.5);
+  			color: #f1f1f1;
+  			width: 200px;
+  			padding: 0px;
+  			margin-left: -300px;
+		}
+		.containers {
+  			position: relative; 
+  			max-width: 800px;
+  			margin: 0 auto;
+		}
+
+		.containers .contents {
+  			position: absolute;
+  			bottom: 0;
+  			background: rgb(0, 0, 0);
+  			background: rgba(0, 0, 0, 0.5);
+  			color: #f1f1f1;
+  			width: 200px;
+  			padding: 0px;
+  			margin-left: 100px;
+		}
+		.containered {
+  			position: relative; 
+  			max-width: 800px;
+  			margin: 0 auto;
+		}
+
+		.containered .contented {
+  			position: absolute;
+  			bottom: 0;
+  			background: rgb(0, 0, 0);
+  			background: rgba(0, 0, 0, 0.5);
+  			color: #f1f1f1;
+  			width: 200px;
+  			padding: 0px;
+  			margin-left: 500px;
+		}
+		.containerey {
+  			position: relative; 
+  			max-width: 800px;
+  			margin: 0 auto;
+		}
+
+		.containerey .contentey {
+  			position: absolute;
+  			bottom: 0;
+  			background: rgb(0, 0, 0);
+  			background: rgba(0, 0, 0, 0.5);
+  			color: #f1f1f1;
+  			width: 200px;
+  			padding: 0px;
+  			margin-left: 900px;
+		}
+    #cartOverlay{
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 2;
+        cursor: pointer;
+    }
+    #cartView{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+        color: white;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+    }
+	</style>
+</head>
+<body background="black.jpg">
+  <script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+	<script>
+		function myFunction() {
+  		document.getElementById("myDropdown").classList.toggle("show");
+		}
+		window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function myFunctions() {
+  		document.getElementById("Dropdownku").classList.toggle("show");
+		}
+		window.onclick = function(event) {
+  if (!event.target.matches('.dropbtns')) {
+    var dropdowns = document.getElementsByClassName("dropdown-contents");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+	</script>
+  <script>
+function on() {
+  document.getElementById("cartOverlay").style.display = "block";
+  document.getElementById("cartView").style.display = "block";
+}
+
+function off() {
+  document.getElementById("cartOverlay").style.display = "none";
+  document.getElementById("cartView").style.display = "block";
+}
+</script>
+<div class="header">
+	<img class="logo" src="logo.png">
+	<img class="tlp" src="tlp.png">
+	<img class="gmail" src="gmail.jpg">
+	<a href="home.html"><img class="vmf" src="vmf.png"></a>
+	<h1>021-322-009-111</h1>
+	<h2>vmfgarage@customerservice.com</h2>
+</div>
+<div class="header2">
+	<a class="home" href="home.html">Home</a>
+	<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Car Menu</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="lamborghini.html">Lamborghini</a>
+    <a href="bmw.html">BMW</a>
+    <a href="Ferrari.html">Ferrari</a>
+  </div>
+</div>
+<img src="cartlogo.jpg" style="width: 30px; height: 30px; position: absolute; margin-left: 300px" onclick="on()">
+<a style="font-family: 'Racing Sans One'" class="beli" href="beli.html">Store</a>
+<div class="dropdowny">
+<button style="font-family: 'Racing Sans One'" onclick="myFunctions()" class="dropbtns">More</button>
+  <div id="Dropdownku" class="dropdown-contents">
+  	<a href="merch.html">Our Merchandise</a>
+    <div class="dropdowney">
+  <button class="dropbtned">Our Offline Store</button>
+  <div class="dropdown-contented">
+    <a href="jakarta.html">Jakarta</a>
+    <a href="bandung.html">Bandung</a>
+    <a href="yogya.html">Yogyakarta</a>
+  </div>
+</div>
+<a href="profile.html">Our Profile</a>
+  </div>
+</div>
+</div>
+<div id="cartOverlay" onclick="off()">
+  <div id="cartView">
+      <p style="text-align: center; font-size: 20px">Your Shopping Cart</p>
+      <hr style="border: 2px solid black; margin-top: 15px; margin-bottom: 15px">
+      <div id="cartDetails" style="padding-left: 50px"></div>
+      <div id="cartTotal" style="padding-right: 25px; text-align: right; font-size: 16px"><p id="totalPrice">Total : $0</p></div>
+      <div id="cartCheckout" style="padding-right: 20px; text-align: right; font-size: 16px"><a href="checkout.html"><button id="btn-checkout">Checkout</button></a></div>
+  </div>
+</div>
+<div class="container">
+  <img src="jacquard.jpg" alt="bomber" style="width:200px; height: 300px; margin-top: 220px; margin-left: -300px;">
+  <div class="content">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Lamborghini Jacquard Bomber Jacket</p>
+    <p style="font-size: 16px; margin-left: 50px;">USD $750.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(0)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div>
+<div class="containers">
+  <img src="leather.jpg" alt="leather" style="width:200px; height: 300px; margin-top: -305px; margin-left: 100px; position: absolute;">
+  <div class="contents">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Lamborghini Leather Jacket</p>
+    <p style="font-size: 16px; margin-left: 50px;">USD $1,400.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(1)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div>
+<div class="containered">
+  <img src="ferraribomber.jpg" alt="shieldtshirt" style="width:200px; height: 300px; margin-top: -305px; margin-left: 500px; position: absolute;">
+  <summary hidden="">Item #3</summary>
+  <div class="contented">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Ferrari Men's Bomber Jacket</p>
+    <p style="font-size: 16px; margin-left: 60px;">USD $200.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(2)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div>
+<div class="containerey">
+  <img src="ferrarijacket.jpg" alt="polo" style="width:200px; height: 300px; margin-top: -305px; margin-left: 900px; position: absolute;">
+  <summary hidden="">Item #4</summary>
+  <div class="contentey">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Ferrari Men's Jacket in T2 Tech-Will</p>
+    <p style="font-size: 16px; margin-left: 60px;">USD $120.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(3)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div>
+<div class="container">
+  <img src="basiccap.jpg" alt="basiccap" style="width:200px; height: 300px; margin-top: 220px; margin-left: -300px;">
+  <summary hidden="">Item #5</summary>
+  <div class="content">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Lamborghini Basic Shield Cap</p>
+    <p style="font-size: 16px; margin-left: 50px;">USD $50.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(4)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div>
+<div class="containers">
+  <img src="lxiiicap.jpg" alt="lxiiicap" style="width:200px; height: 300px; margin-top: -305px; margin-left: 100px; position: absolute;">
+  <div class="contents">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Bull LXIII Cap</p>
+    <p style="font-size: 16px; margin-left: 50px;">USD $48.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(5)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div>
+<div class="containered">
+  <img src="redmancap.jpg" alt="redmancap" style="width:200px; height: 300px; margin-top: -305px; margin-left: 500px; position: absolute;">
+  <div class="contented">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Ferrari Everywhere Red Men's Cap</p>
+    <p style="font-size: 16px; margin-left: 60px;">USD $60.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(6)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div>
+<div class="containerey">
+  <img src="redcloud.jpg" alt="redcloud" style="width:200px; height: 300px; margin-top: -305px; margin-left: 900px; position: absolute;">
+  <div class="contentey">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Ferrari Men's Cap with Red Clouds Print</p>
+    <p style="font-size: 16px; margin-left: 60px;">USD $45.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(7)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div><div class="container">
+  <img src="polohitech.jpg" alt="polohitech" style="width:200px; height: 300px; margin-top: 220px; margin-left: -300px;">
+  <div class="content">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Lamborghini Mettalic Shield T-Shirt</p>
+    <p style="font-size: 16px; margin-left: 50px;">USD $100.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(8)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div>
+<div class="containers">
+  <img src="shieldtshirt.jpg" alt="shieldtshirt" style="width:200px; height: 300px; margin-top: -305px; margin-left: 100px; position: absolute;">
+  <div class="contents">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Lamborghini Hi-Tech Polo Shirt</p>
+    <p style="font-size: 16px; margin-left: 50px;">USD $140.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(9)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div>
+<div class="containered">
+  <img src="ferraripolo.jpg" alt="ferraripolo" style="width:200px; height: 300px; margin-top: -305px; margin-left: 500px; position: absolute;">
+  <div class="contented">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Ferrari Men's Jacquard Jersey Polo Shirt with zip</p>
+    <p style="font-size: 16px; margin-left: 60px;">USD $100.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(10)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div>
+<div class="containerey">
+  <img src="ferrarishirt.jpg" alt="ferrarishirt" style="width:200px; height: 300px; margin-top: -305px; margin-left: 900px; position: absolute;">
+  <div class="contentey">
+    <p style="font-size: 16px; margin-left: 5px; text-align: center">Ferrari Men's T-Shirt in Technical Fabric with Print</p>
+    <p style="font-size: 16px; margin-left: 60px;">USD $65.00</p>
+    <button style="margin-left: 40px" class="addto" onclick="addcart(11)"><img style="height: 20px;width: 20px" src="cartlogo.jpg">Add to Cart</button>
+  </div>
+</div>
+<footer>
+  <script type="text/javascript">
+    var radio = ["Lamborghini Jacquard Bomber Jacket", "Lamborghini Leather Jacket", "Ferrari Men's Bomber Jacket", "Ferrari Men's Jacket in T2 Tech-Will","Lamborghini Basic Shield Cap", "Bull LXIII Cap", "Ferrari Everywhere Red Men's Cap", "Ferrari Men's Cap with Red Clouds Print", "Lamborghini Mettalic Shield T-Shirt", "Lamborghini Hi-Tech Polo Shirt", "Ferrari Men's Jacquard Jersey Polo Shirt with zip", "Ferrari Men's T-Shirt in Technical Fabric with Print"];
+    var harga = [750, 1400, 200, 120, 50, 48, 60, 45, 100, 140, 100, 65];
+    var cart = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var counter = 0;
+    
+    var total = 0;
+    
+    
+    $(document).ready(function() {
+      $('#cart').html('<i class="fa fa-shopping-cart" aria-hidden="true"> '+counter+'</i>');  
+    });
+    
+    $('#cartOverlay').click(function() {
+      $('#cartOverlay').css({"display":"none"});
+      $('#cartView').css({"display":"none"});
+    });
+
+    $('#cart').click(function() {
+      $('#cartOverlay').css({"display":"block"});
+      $('#cartView').css({"display":"block"});
+    });
+
+    function checkCart(){
+      if (cart[0]>0) {
+          $('#cartDetails').html('<p>'+radio[0]+' * '+cart[0]+'</p>');
+        }
+      for (var i = 1; i <= cart.length - 1; i++) {
+        if (cart[i]>0) {
+          $('#cartDetails').append('<p>'+radio[i]+' * '+cart[i]+'</p>');
+        }
+      }
+    }
+
+    function hitungTotal() {
+      total =
+        harga[0]*cart[0]+
+        harga[1]*cart[1]+
+        harga[2]*cart[2]+
+        harga[3]*cart[3]+
+        harga[4]*cart[4]+
+        harga[5]*cart[5]+
+        harga[6]*cart[6]+
+        harga[7]*cart[7]+
+        harga[8]*cart[8]+
+        harga[9]*cart[9]+
+        harga[10]*cart[10]+
+        harga[11]*cart[11];
+    }
+
+    function addcart(item) {
+      cart[item] += 1;
+      counter += 1;
+      alert(radio[item]+" Added to Cart ($"+harga[item]+")");
+      $('#cart').html('<i class="fa fa-shopping-cart" aria-hidden="true"> '+counter+'</i>');
+      checkCart();
+      hitungTotal();
+      $('#totalPrice').html('Total : $'+total);
+    }
+  </script>
+</body>
+</html>

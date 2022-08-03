@@ -1,0 +1,109 @@
+        H3 {
+            color: darkgreen;
+            font-family: algerian;
+            position: absolute;
+            right: 130px;
+            top: 500px;
+        }
+        Aside P {
+            text-align: center;
+            background-color: darkgreen;
+            color: white;
+            font-size: 15px;
+        }
+       
+        details {
+            color: darkgreen;
+            font-family: algerian;
+            font-size: 15px;
+        }
+        H1 {
+            font-family: algerian;
+            color: darkgreen;
+            font-size: 20px;
+            position: absolute;
+            top: 0px;
+            right: 50px;
+        }
+        Article P {
+            color: black;
+            font-size: 15px;
+            font-family: arial;
+            width: 550px;
+        }
+
+       H5 {
+           font-family: arial;
+           color: white;
+           font-size: 16px;
+           float:right;
+        }
+        H2 {
+            color: darkgreen;
+            font-family: algerian;
+            position: relative;
+            top: 0px;
+            right: 0px;
+            left: 500px;
+        }
+        details UL {
+            color: #D51165;
+            font-size: 15px;
+       }
+        H4 {
+            color: darkgreen;
+            font-family: algerian;
+		margin-top:50px;
+		font-size:22px;
+        }
+        video {
+            position: absolute;
+            right: 50px;
+            top: 560px;
+        }
+        #mainDivContainer H4 {
+            color: darkgreen;
+            font-size: 24px;
+        }
+       .auto-style1 {
+            color: #FFFFFF;
+           font-style: italic;
+        }
+        #callus {
+            height: 80px;
+            width: 50px;
+            float:right;
+        }
+NAV a:link{
+color:white;
+}
+NAV a:visited{
+color:white;
+} 
+NAV a:hover{ 
+color: D51165; 
+} 
+NAV A{
+display: inline;
+text-decoration: none;
+color:white;
+}
+@keyframes multicolor
+{
+0% {color:darkgreen;}
+40% {color:hotpink;}
+60%{color:darkgreen;}
+80% {color:hotpink;}
+}
+@-webkit-keyframes multicolor /* Chrome */
+{
+0% {color:darkgeen;}
+40% {color:hotpink;}
+60%{color:darkgreen;}
+80% {color:hotpink;}
+}
+.auto-style2{
+font-size:40px;
+animation:multicolor 5s infinite;
+-webkit-animation:multicolor 5s infinite; /*Chrome */
+}

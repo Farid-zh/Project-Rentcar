@@ -1,0 +1,50 @@
+/*biar smooth scrollnya*/
+		html {
+			scroll-behavior: smooth;
+		}
+
+		/*biar fullscreen webnya*/
+		body {
+			padding: 0;
+			margin: 0;
+		}
+
+		#footer-wrap {
+			padding-right: 10%;
+			padding-left: 10%;
+			color: white;
+			background-color: #111312;
+		}
+
+		#cus-care a {
+			text-decoration: none;
+		}
+
+		#cus-care a:hover {
+			transition: 0.5s;
+			color: red;
+		}
+
+		#sosmed {
+			border-top: solid 1px;
+		}
+
+		#sosmed a{
+			padding-right: 20px;
+			font-size: 30px;
+		}
+
+		#sosmed a:hover {
+			transition: 0.5s;
+			color: red;
+		}
+
+		#copyright {
+			background-color: black;
+			color: white;
+		}
+
+		#copyright:hover {
+			transition: 0.5s;
+			background-color: red;
+		}

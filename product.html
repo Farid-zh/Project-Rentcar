@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="w3.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<link rel="stylesheet" type="text/css" href="body.css">
+	<title>Our Product</title>
+	<style>
+		.header{
+			background-image: url(header.png);
+			padding: 10px;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			position: fixed;
+			z-index: 999;
+		}
+		#header2{
+			z-index: 999;
+		}
+		.logo{
+			height: 80px;
+			width: 120px;
+			margin-top: 0px;
+		}	
+		h1{
+			color: white;
+			font-size: 15px;
+			top: 6px;
+			right: 55px;
+			position: fixed;
+		}
+		.gmail{
+			height: 30px;
+			width: 30px;
+			background-color: black;
+			border-radius: 50px;
+			top: 50px;
+			right: 10px;
+			position: fixed; 
+		}
+		.tlp{
+			height: 30px;
+			width: 30px;
+			background-color: black;
+			border-radius: 50px;
+			top: 10px;
+			right: 10px;
+			position: fixed;
+		}
+		.tlp:hover{
+			 animation: shake 0.5s;
+			 animation-iteration-count: infinite; 
+		}
+		@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+		h2{
+			color: white;
+			font-size: 15px;
+			top: 42px;
+			right: 50px;
+			position: fixed;
+		}
+		.vmf{
+			position: fixed;
+			left: 650px;
+			height: 50px;
+			width: 200px;
+			top: 25px;
+		}
+		.home{
+			text-decoration: none;
+			color: black;
+			top: 20px;
+			background-color: whitesmoke;
+			padding: 8px;
+			font-size: 16px;
+			margin-left: 50px;
+		}
+		#header2{
+			position: fixed;
+			top: 103px;
+			background-color: whitesmoke;
+			padding: 8px;
+			width: 100%;
+			left: 0px;
+		}
+		.home:hover{
+			background-color: lightsteelblue;
+		}
+
+		.why{
+			width: 30%;
+			height: 50px;
+			margin-top: 50px;
+			margin-left: 520px;
+		}
+		.cst{
+			width: 120px;
+			height: 120px;
+			margin-top: 50px;
+			margin-left: 80px;
+			border-radius: 70px;
+		}
+		h4{
+			color: white;
+			text-align: center;
+			font-size: 20px;
+			margin-left: 0px;
+		}
+		h5{
+			color: white;
+			font-size: 20px;
+			margin-left: 130px;
+			text-align: center;
+		}
+		.quality{
+			width: 120px;
+			height: 120px;
+			margin-top: 50px;
+			margin-left: 200px;
+			border-radius: 70px;
+		}
+
+		.best{
+			height: 120px;
+			width: 120px;
+			margin-top: 80px;
+			margin-left: 200px;
+			border-radius: 70px;
+		}
+		h6{
+			color: white;
+			font-size: 20px;
+			margin-left: 90px;
+			margin-top: 20px;
+			text-align: center;
+		}
+		.ftr{
+			margin-top: -50px;
+		}
+		.dropbtn {
+  			background-color: whitesmoke;
+  			color: black;
+  			padding: 8px;
+  			font-size: 16px;
+  			border: none;
+  			cursor: pointer;
+  			margin-top: -90px;
+  			margin-left: 50px;
+		}
+		.dropbtn:hover, .dropbtn:focus {
+  			background-color: lightsteelblue;
+		}
+		.dropdown {
+ 		 	position: relative;
+  			display: inline-block;
+		}
+		.dropdown-content {
+  			display: none;
+  			position: absolute;
+  			background-color: #f1f1f1;
+  			min-width: 160px;
+  			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  			z-index: 1;
+  			margin-left: 50px;
+		}
+		.dropdown-content a {
+  			color: black;
+  			padding: 12px 16px;
+  			text-decoration: none;
+  			display: block;
+		}
+		.dropdown-content a:hover {background-color: #ddd}
+		.show {display:block;}
+		.content {
+			width: 100%;
+			height: auto;
+			padding: 0;
+		}
+		.cabang{
+			text-decoration: none;
+			color: black;
+			background-color: whitesmoke;
+			padding: 8px;
+			margin-left: 50px;
+			font-size: 16px;
+		}
+		.cabang:hover{
+			background-color: lightsteelblue;
+		}
+		.product{
+			text-decoration: none;
+			color: black;
+			background-color: whitesmoke;
+			padding: 8px;
+			margin-left: 50px;
+			font-size: 16px
+		}
+		.product:hover{
+			background-color: lightsteelblue;
+		}
+
+		#pro-box img {
+			width: 100%;
+		}
+		#pro-box div{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+<body background="black.jpg">
+	<script type="text/javascript" src="jquery-1.8.3.js"></script>
+	<script>
+		function myFunction() {
+  		document.getElementById("myDropdown").classList.toggle("show");
+		}
+		window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+	</script>
+	<div class="header">
+	<img class="logo" src="logo.png">
+	<img class="tlp" src="tlp.png">
+	<img class="gmail" src="gmail.jpg">
+	<a href="home.html"><img class="vmf" src="vmf.png"></a>
+	<h1>021-322-009-111</h1>
+	<h2>vmfgarage@customerservice.com</h2>
+</div>
+
+<div  class="w3-row w3-container" id="header2">
+	<a class="home" href="home.html">Home</a>
+	<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Car Menu</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="lamborghini.html">Lamborghini</a>
+    <a href="bmw.html">BMW</a>
+    <a href="ferrari.html">Ferrari</a>
+  </div>
+</div>
+	<a class="cabang" href="cabang.html">Our Offline Store</a>
+	<a class="product" href="product.html">Our Product</a>
+</div> 	
+
+<div id="product-wrap" class="w3-row">
+	<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="458spd.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">Ferrari 458 Spider</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="458spc.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">Ferrari 458 speciale</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="488gtb.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">Ferrari 488 GTB</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="812spf.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">Ferrari 812 SuperFast</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="clft.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">Ferrari California T</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="prtf.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">Ferrari Portofino</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+			<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="bmw7.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red"></p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+			<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="bmw6.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">BMW 6 Series GRAN TURISMO</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="bmw5.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">BMW 4 Series Bussiness Athlete</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="bmw4.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">BMW 4 Series GRAN COUPE</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="bmwb3.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">New BMW Series 3</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="bmw2.png"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">BMW 2 Series COUPE</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="bmw1.png" align="left"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">BMW 1 Series</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="huracan.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">Lamboghini Huracan LP 610-4</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="egoista.png"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">Lamborghini Egoista</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="urus.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">Lamborghini URUS</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="w3-quarter w3-panel" id="pro-box">
+			<div class="w3-display-container" id="pro-img">
+				<a class="w3-container" href=""><img style="padding-top: 200px;" src="aventador.jpg"></a>
+			</div>
+			<div id="pro-name" align="center">
+				<p style="font-weight: bold; color: red">Lamborghini Aventador LP700-4</p>
+				<p style="color: red">Rp 249.000</p>
+			</div>
+			<div class="w3-display-bottom w3-display-hover" align="center">
+					<button style="background-color: red;" type="button" class="w3-red w3-btn w3-round">Shop Now</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
